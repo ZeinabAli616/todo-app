@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>how to do list</title>
+        <link rel="stylesheet" href="./ToDoList.css">
+        
+    </head>
+    <body>
+        <div id="mydiv" class="header">
+            <h2>MY TO DO LIST</h2>
+            <input type="text" id="myinput" placeholder="title...">
+            <button class="addBtn" onclick="add()">Add</button>
+
+        </div>
+        <ul id="myul" class="u">
+            
+        </ul>
+        <script>
+            function add() {
+               var d = document.getElementById('myinput').value;
+               let ul = document.getElementById('myul');
+               let li = document.createElement('li');
+               let span = document.createElement('span');
+               span.innerText = d;
+               document.getElementById('myinput').value = "";
+               let button = document.createElement('button');
+               let button2 = document.createElement('button');
+               
+               button.innerText = "donne";
+               button.addEventListener('click', function() {
+                   li.style.background = 'green';
+                })
+                let actions = document.createElement('div');
+                actions.appendChild(button);
+                actions.appendChild(button2);
+                li.appendChild(span);
+                li.appendChild(actions);
+                li.style.display = 'flex';
+                li.style.justifyContent = 'space-between';
+                ul.appendChild(li);
+              
+            }
+        </script>
+    </body>
+</html>

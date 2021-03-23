@@ -1,0 +1,23 @@
+*{
+    box-sizing: border-box;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8PX 12PX 4OPX;
+    background: #eee;
+    font-size: 18PX;
+    display: flex;
+    justify-content: space-between;
+}
+ul li:nth-child(add){
+    background: #f9f9f9;
+}
+ul li:hover {
+    background: #ddd;
+}
+
